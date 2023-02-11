@@ -1,0 +1,56 @@
+* {
+    font-family: Raleway;
+}
+
+.buttonShowMenu {
+    font-family: Raleway;
+    pointer-events: auto;
+    cursor: pointer;
+    border: none;
+    padding: 1rem 3rem;
+    position: relative;
+    display: block;
+}
+
+.buttonShowMenu::before,
+.buttonShowMenu::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.buttonShowMenu {
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    font-weight: 700;
+    font-size: 0.85rem;
+    overflow: hidden;
+    color: #fff;
+    background: #830d0d;
+}
+
+.buttonShowMenu span {
+    position: relative;
+}
+
+.buttonShowMenu::before {
+    content: '';
+    color: #fff;
+    background: #c71515;
+    width: 130%;
+    left: -15%;
+    transform: skew(30deg);
+    transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+.buttonShowMenu:hover::before {
+    transform: translate3d(100%, 0, 0);
+}
+
+.captionBG {
+    margin: auto;
+    width: 80%;
+    background: radial-gradient(40% 70%, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
+}

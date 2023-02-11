@@ -1,0 +1,79 @@
+.foodCard {
+    background-color: #111111;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px 2px rgba(0,0,0,0.5);
+}
+
+.cost {
+    background-color: white;
+    color: black;
+    border-radius: 26px;
+    width: 70px;
+    padding: 5px;
+    text-align: center;
+}
+
+.quantity_inner * {
+    box-sizing: border-box;
+}
+.quantity_inner {
+    display: inline-flex;
+    position: relative;
+    z-index: 1;
+}
+.quantity_inner .bt_minus,
+.quantity_inner .bt_plus,
+.quantity_inner .quantity {
+    height: 30px;
+    width: 30px;
+    padding: 0;
+    border: 0;
+    margin-left: 10px;
+    background-color: white;
+    cursor: pointer;
+}
+.quantity_container {
+    background-color: white;
+    color: black;
+    transition: 0.9s;
+    width: 140px;
+    height: 35px;
+    position: static;
+    z-index: -1;
+    font-size: 20px;
+    border-radius: 0 26px 26px 0;
+}
+.quantity_inner .bt_buy {
+    background-color: #c71515;
+    border: 0;
+    color: black;
+    transition: 0.9s;
+    width: 140px;
+    height: 35px;
+    position: static;
+    z-index: -1;
+    font-size: 20px;
+    border-radius: 0 26px 26px 0;
+}
+.quantity_inner .quantity {
+    width: 30px;
+    text-align: center;
+    font-size: 20px;
+    color: black;
+}
+.quantity_inner .bt_minus svg,
+.quantity_inner .bt_plus svg {
+    stroke: black;
+    stroke-width: 1px;
+    transition: 0.5s;
+    margin: 4px;
+}
+
+.quantity_inner .bt_buy:hover {
+    background-color: white;
+}
+
+.quantity_inner .bt_minus:hover svg,
+.quantity_inner .bt_plus:hover svg {
+    stroke: #e1e1e1;
+}

@@ -1,0 +1,63 @@
+.basketItem {
+    background-color: #111111;
+    border-radius: 5px;
+    box-shadow: 1px 1px 4px 1px rgba(0,0,0,0.5);
+    margin: 10px 0 10px 0;
+    padding: 15px 0 15px 0;
+}
+.btnDelete {
+    display: block;
+    height: 45px;
+    margin: 0;
+    cursor: pointer;
+}
+
+.quantity_inner_basket * {
+    box-sizing: border-box;
+}
+.quantity_inner_basket {
+    display: inline-flex;
+    position: relative;
+    z-index: 1;
+}
+.quantity_inner_basket .bt_minus_basket,
+.quantity_inner_basket .bt_plus_basket,
+.quantity_inner_basket .quantity_basket {
+    height: 26px;
+    width: 20px;
+    padding: 0;
+    border: 0;
+    background-color: white;
+    cursor: pointer;
+    margin-left: 10px;
+}
+.quantity_container_basket {
+    background-color: white;
+    color: black;
+    transition: 0.9s;
+    width: 120px;
+    height: 28px;
+    position: static;
+    z-index: -1;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.quantity_inner_basket .quantity_basket {
+    width: 40px;
+    text-align: center;
+    font-size: 20px;
+    color: black;
+}
+.quantity_inner_basket .bt_minus_basket svg,
+.quantity_inner_basket .bt_plus_basket svg {
+    stroke: black;
+    stroke-width: 1px;
+    transition: 0.5s;
+    margin-bottom: 2px;
+}
+
+.quantity_inner_basket .bt_minus_basket:hover svg,
+.quantity_inner_basket .bt_plus_basket:hover svg {
+    stroke: #e1e1e1;
+}

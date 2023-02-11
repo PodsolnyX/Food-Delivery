@@ -1,0 +1,191 @@
+:root{
+    --white: #f9f9f9;
+    --black: #36383F;
+    --grey: #85888C;
+}
+
+.activeLink {
+    border-bottom: 1px solid white;
+}
+
+.btnBasket {
+    display: block;
+    height: 40px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+li > a:hover {
+    border-bottom: 1px solid white;
+}
+
+
+
+.header{
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    position: static;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    padding-top: 10px;
+}
+
+.top {
+    display: flex;
+}
+
+.logo{
+    display: block;
+    height: 70px;
+    margin-left: 10px;
+}
+
+/* Nav menu */
+.nav{
+    width: 100%;
+    position: fixed;
+    overflow: hidden;
+}
+
+.menu {
+    padding-left: 0px;
+}
+
+.menu a{
+    display: block;
+    padding: 20px;
+    color: var(--white);
+
+}
+
+.menu a:hover{
+    background-color: #171717;
+}
+
+.nav{
+    max-height: 0;
+    transition: max-height .4s ease-out;
+}
+
+/* Menu Icon */
+
+.hamb{
+    cursor: pointer;
+    float: right;
+    padding: 40px 20px;
+}
+
+
+.hamb_line {
+    background: var(--white);
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+
+}
+
+.hamb_line::before,
+.hamb_line::after{
+    background: white;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.hamb_line::before{
+    top: 5px;
+}
+
+.hamb_line::after{
+    top: -5px;
+}
+
+
+.side_menu {
+    display: none;
+}
+
+/* Toggle menu icon */
+
+.side_menu:checked ~ nav{
+    max-height: 100%;
+}
+
+.side_menu:checked ~ .hamb .hamb_line {
+    background: black;
+}
+
+.side_menu:checked ~ .hamb .hamb_line::before {
+    transform: rotate(-45deg);
+    top:0;
+
+}
+
+.side_menu:checked ~ .hamb .hamb_line::after {
+    transform: rotate(45deg);
+    top:0;
+}
+
+
+/* Responsiveness */
+@media (max-width: 850px) {
+    .header {
+        display: block;
+        /*position: fixed;*/
+        background-color: #111111;
+        box-shadow: 1px 1px 5px 0px black;
+    }
+    .nav {
+        background-color: #111111;
+        flex-direction: column;
+    }
+    .menu a {
+        text-align: center;
+    }
+    .logo {
+        display: inline-block;
+    }
+    .activeLink {
+        border-bottom: 0px solid white;
+    }
+    li > a:hover {
+        border-bottom: 0px solid white;
+    }
+}
+
+@media (min-width: 850px) {
+
+    .nav{
+        max-height: none;
+        top: 0;
+        position: relative;
+        float: right;
+        width: fit-content;
+    }
+
+    .menu li{
+        float: left;
+    }
+
+    .menu a:hover{
+        background-color: transparent;
+        color: var(--grey);
+
+    }
+
+    .hamb{
+        display: none;
+    }
+
+}

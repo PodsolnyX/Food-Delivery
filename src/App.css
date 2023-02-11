@@ -1,0 +1,53 @@
+* {
+    font-family: Raleway;
+    color: white;
+}
+
+.secondaryText {
+    color: #d0d0d0;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: #d3d3d3;
+}
+
+.backgroundImg {
+
+    background: url("./img/bg.jpg") center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.footer {
+    background-color: #111111;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    bottom: 0px;
+    height: 40px;
+    width: 100%;
+    z-index: 5;
+    margin-bottom: -10px;
+}
+
+.content {
+    min-height: calc(100vh - 100px);
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
