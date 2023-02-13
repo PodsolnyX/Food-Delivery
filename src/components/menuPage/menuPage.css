@@ -5,3 +5,24 @@
     box-shadow: 1px 1px 10px 2px rgba(0,0,0,0.5);
 }
 
+#movies-nav-pagination > li > a {
+    background-color: #1a1a1a;
+    color: #a7a7a7;
+    border-color: #232323;
+}
+
+#movies-nav-pagination > li > a:focus,
+#movies-nav-pagination > li > a:hover,
+#movies-nav-pagination > li > span:focus,
+#movies-nav-pagination > li > span:hover {
+    color: #bdbdbd;
+    background-color: #232323;
+    border: solid 1px #232323;
+}
+
+#movies-nav-pagination > li > .active {
+    color: white;
+    background-color: #232323;
+    border: solid 1px #232323;
+}
+

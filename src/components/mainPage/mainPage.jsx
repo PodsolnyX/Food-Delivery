@@ -1,3 +1,4 @@
+import React from "react";
 import './mainPage.css';
 import foodImage1 from "./../../img/food5.jpg";
 import foodImage2 from "./../../img/food4.jpg";
